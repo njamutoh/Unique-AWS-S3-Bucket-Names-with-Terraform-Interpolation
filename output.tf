@@ -1,11 +1,6 @@
-output "primary_bucket_name" {
-  description = "The name of the primary S3 bucket"
-  value       = aws_s3_bucket.primary_bkt.bucket
-}
-
-output "logs_bucket_name" {
-  description = "The name of the logs S3 bucket"
-  value       = aws_s3_bucket.logs_bkt.bucket
+output "bucket_name" {
+  description = "The name of the S3 bucket created"
+  value       = aws_s3_bucket.name.bucket
 }
 
 output "aws_region" {
@@ -28,12 +23,7 @@ output "bucket_id" {
   value       = random_id.bucket_id.hex
 }
 
-output "primary_bucket_arn" {
-  description = "The ARN of the primary S3 bucket"
-  value       = aws_s3_bucket.primary_bkt.arn
-}
-
-output "logs_bucket_arn" {
-  description = "The ARN of the logs S3 bucket"
-  value       = aws_s3_bucket.logs_bkt.arn
+output "bucket_arn" {
+  description = "The ARN of the S3 bucket created"
+  value       = aws_s3_bucket.name.arn
 }
